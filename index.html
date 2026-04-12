@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocMind – Chat with your documents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span class="logo-text">DocMind</span>
+                </div>
+                <p class="logo-sub">Ask questions about your PDFs</p>
+            </div>
+
+            <div class="upload-area" id="dropZone">
+                <div class="upload-icon">⬆️</div>
+                <p class="upload-label">Drop a PDF here</p>
+                <p class="upload-or">or</p>
+                <label class="upload-btn" for="fileInput">Browse file</label>
+                <input type="file" id="fileInput" accept=".pdf" hidden>
+                <p id="uploadStatus"></p>
+            </div>
+
+            <div class="doc-list-section">
+                <p class="section-label">Your Documents</p>
+                <select id="docSelect" size="6">
+                    <option value="" disabled>No documents yet</option>
+                </select>
+                <button id="clearChat" class="clear-btn">🗑 Clear chat</button>
+            </div>
+        </aside>
+
+        <!-- Main chat area -->
+        <main class="chat-area">
+            <div class="chat-header">
+                <span id="activeDoc" class="active-doc-name">Select a document to start chatting</span>
+            </div>
+
+            <div id="chatBox" class="chat-box">
+                <div class="welcome-msg">
+                    <div class="welcome-icon">💬</div>
+                    <h2>No document selected</h2>
+                    <p>Upload a PDF on the left and select it to start asking questions.</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="questionInput" placeholder="Ask a question about your document..." autocomplete="off">
+                <button id="askBtn">
+                    <span id="askBtnText">Send</span>
+                    <span id="askBtnIcon">➤</span>
+                </button>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
