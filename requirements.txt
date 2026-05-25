@@ -1,0 +1,28 @@
+# RagChat -- Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Web framework
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+
+# Settings & environment
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.0
+
+# AI -- LLM
+groq>=0.9.0
+
+# RAG -- embeddings & vector store
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+
+# PDF text extraction
+pymupdf>=1.24.0
+
+# PyTorch (CPU-only build -- smaller, no GPU required)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2.0
+
+# Production WSGI server
+gunicorn>=22.0.0
